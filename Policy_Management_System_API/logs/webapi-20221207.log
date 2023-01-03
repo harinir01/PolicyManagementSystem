@@ -1,0 +1,13 @@
+[2022-12-07 18:23:32.479 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-07 18:23:32.731 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-07 18:23:32.731 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-07 18:23:32.736 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-07 18:23:32.736 +05:30  INF]  Hosting environment: Development
+[2022-12-07 18:23:32.737 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-07 19:53:34.883 +05:30  INF]  Application is shutting down...
+[2022-12-07 19:53:39.794 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-07 19:53:39.939 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-07 19:53:39.939 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-07 19:53:39.943 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-07 19:53:39.943 +05:30  INF]  Hosting environment: Development
+[2022-12-07 19:53:39.943 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\

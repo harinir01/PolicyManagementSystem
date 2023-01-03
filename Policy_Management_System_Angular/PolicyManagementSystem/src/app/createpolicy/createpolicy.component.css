@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #967bb6;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:'Poppins',sans-serif;    margin: 0;
+    display: grid;
+    /* place-items: center; */
+    min-height: 100vh;
+  }
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  select{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    
+  }
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  .extend
+  {
+    width:100%;
+  }
+  .twovalue
+  {
+    display: block;
+    width: 1000%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .width-50 {
+    width: 30%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+    margin-top: 4%;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* counter-reset: step; */
+    margin: 2rem 0 4rem;
+  }
+  
+
+  /* Form */
+  .form {
+    width: 600px;
+    /* width: clamp(700px, 50%, 700px); */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding:3rem;
+    height: 1200px;;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    width: 1000px;
+    /* animation: animate 0.5s; */
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+.margin{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+  
+  .btn {
+    padding: 0.75rem;
+    width: 130px;
+    display: block;
+    text-decoration: none;
+    background-color: green;
+    margin-left:40%;
+    margin-top: 10%;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+
+
+
+
+  .footer {
+    text-align: center;
+    padding-bottom: .6rem;
+    color: purple;
+}
+
+.footer-background {
+
+    background-color:#33383b;
+
+}
+
+.sticky-footer {
+
+    position: sticky;
+  
+    top: 100%;
+  
+  }

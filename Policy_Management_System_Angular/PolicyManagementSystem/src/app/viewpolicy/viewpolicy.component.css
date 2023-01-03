@@ -1,0 +1,8 @@
+.pagination {
+    position:relative;
+    top: 85%;
+    /* bottom: %; */
+    place-items: center;
+    /* margin-left: 40%; */
+    /* margin-top: 100%; */
+}

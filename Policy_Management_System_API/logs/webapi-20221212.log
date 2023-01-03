@@ -1,0 +1,1445 @@
+[2022-12-12 11:09:22.386 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 11:09:22.425 +05:30  INF]  Creating key {87052148-41a3-4339-8b54-72843100c17c} with creation date 2022-12-12 05:39:22Z, activation date 2022-12-13 06:31:10Z, and expiration date 2023-03-12 05:39:22Z.
+[2022-12-12 11:09:22.431 +05:30  INF]  Writing data to file 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys\key-87052148-41a3-4339-8b54-72843100c17c.xml'.
+[2022-12-12 11:09:22.803 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 11:09:22.803 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 11:09:22.811 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 11:09:22.811 +05:30  INF]  Hosting environment: Development
+[2022-12-12 11:09:22.811 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 11:12:11.255 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7024/Policy/CreatePolicy - -
+[2022-12-12 11:12:11.302 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:12:11.307 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7024/Policy/CreatePolicy - - - 204 - - 55.6415ms
+[2022-12-12 11:12:11.309 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json 363
+[2022-12-12 11:12:11.311 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:12:11.315 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-12-12 11:12:11.333 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:12:12.638 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:12:13.148 +05:30  INF]  Executed DbCommand (49ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [vehicledetail] ([IsActive], [VehicleModel], [VehicleNumber])
+VALUES (@p0, @p1, @p2);
+SELECT [VehicleDetailId]
+FROM [vehicledetail]
+WHERE @@ROWCOUNT = 1 AND [VehicleDetailId] = scope_identity();
+[2022-12-12 11:12:13.287 +05:30  INF]  Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [policy] ([CoverageId], [Description], [Duration], [EndDate], [HouseDetailId], [InsuredAmount], [InsuredHolderAge], [InsuredName], [IsActive], [PolicyTypeId], [Premium], [StartDate], [Title], [VehicleDetailId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [PolicyId]
+FROM [policy]
+WHERE @@ROWCOUNT = 1 AND [PolicyId] = scope_identity();
+[2022-12-12 11:12:13.303 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-12-12 11:12:13.347 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 2008.6317ms
+[2022-12-12 11:12:13.348 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-12-12 11:12:13.353 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json 363 - 200 47 application/json;+charset=utf-8 2043.1009ms
+[2022-12-12 11:15:18.435 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7024/Policy/CreatePolicy - -
+[2022-12-12 11:15:18.439 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:15:18.439 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7024/Policy/CreatePolicy - - - 204 - - 3.5812ms
+[2022-12-12 11:15:18.445 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json 271
+[2022-12-12 11:15:18.445 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:15:18.446 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-12-12 11:15:18.446 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:15:18.454 +05:30  INF]  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[2022-12-12 11:15:18.471 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 24.6809ms
+[2022-12-12 11:15:18.471 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-12-12 11:15:18.471 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json 271 - 400 941 application/problem+json;+charset=utf-8 25.6439ms
+[2022-12-12 11:33:59.041 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:33:59.048 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:33:59.048 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:33:59.051 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:33:59.097 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:33:59.382 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:33:59.409 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:33:59.416 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 364.5258ms
+[2022-12-12 11:33:59.416 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:33:59.416 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 374.6809ms
+[2022-12-12 11:34:21.393 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:34:21.393 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:34:21.393 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:21.393 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:34:21.404 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:34:21.436 +05:30  INF]  Executed DbCommand (28ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:34:21.437 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:34:21.437 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 43.9991ms
+[2022-12-12 11:34:21.437 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:21.438 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 44.5589ms
+[2022-12-12 11:34:22.471 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:34:22.471 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:34:22.471 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.471 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:34:22.472 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:34:22.484 +05:30  INF]  Executed DbCommand (8ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:34:22.485 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:34:22.485 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 14.0579ms
+[2022-12-12 11:34:22.485 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.485 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 14.5789ms
+[2022-12-12 11:34:22.652 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:34:22.653 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:34:22.653 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.653 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:34:22.655 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:34:22.669 +05:30  INF]  Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:34:22.670 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:34:22.671 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 17.3969ms
+[2022-12-12 11:34:22.671 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.671 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 18.7474ms
+[2022-12-12 11:34:22.868 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:34:22.868 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:34:22.868 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.868 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:34:22.871 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:34:22.884 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:34:22.884 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:34:22.885 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 16.8218ms
+[2022-12-12 11:34:22.885 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:22.885 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 17.4231ms
+[2022-12-12 11:34:43.899 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:34:43.899 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:34:43.899 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:43.899 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:34:43.900 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:34:43.920 +05:30  INF]  Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:34:43.921 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:34:43.922 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 22.3291ms
+[2022-12-12 11:34:43.922 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:34:43.922 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 22.8340ms
+[2022-12-12 11:34:56.474 +05:30  INF]  Application is shutting down...
+[2022-12-12 11:34:59.978 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 11:35:00.089 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 11:35:00.089 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 11:35:00.094 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 11:35:00.094 +05:30  INF]  Hosting environment: Development
+[2022-12-12 11:35:00.094 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 11:35:05.645 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/ - -
+[2022-12-12 11:35:05.711 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/ - - - 404 0 - 67.2211ms
+[2022-12-12 11:35:10.177 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger - -
+[2022-12-12 11:35:10.178 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger - - - 301 0 - 0.8192ms
+[2022-12-12 11:35:10.183 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-12-12 11:35:10.229 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 46.0670ms
+[2022-12-12 11:35:10.240 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-12-12 11:35:10.242 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-12-12 11:35:10.248 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-12-12 11:35:10.267 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-12-12 11:35:10.267 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-12-12 11:35:10.267 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-12-12 11:35:10.268 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 26.1287ms
+[2022-12-12 11:35:10.268 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 27.5818ms
+[2022-12-12 11:35:10.268 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 19.9961ms
+[2022-12-12 11:35:11.879 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/TGV - -
+[2022-12-12 11:35:11.880 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/TGV - - - 404 0 - 0.3921ms
+[2022-12-12 11:35:19.640 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger - -
+[2022-12-12 11:35:19.641 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger - - - 301 0 - 0.2724ms
+[2022-12-12 11:35:19.642 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-12-12 11:35:19.643 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 0.4668ms
+[2022-12-12 11:35:20.713 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-12-12 11:35:20.713 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-12-12 11:35:20.713 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-12-12 11:35:20.716 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-12-12 11:35:20.717 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 3.5004ms
+[2022-12-12 11:35:20.717 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-12-12 11:35:20.717 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 3.9039ms
+[2022-12-12 11:35:20.720 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-12-12 11:35:20.720 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 6.7123ms
+[2022-12-12 11:35:20.846 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-12-12 11:35:20.937 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.3696ms
+[2022-12-12 11:43:07.535 +05:30  INF]  Application is shutting down...
+[2022-12-12 11:43:12.839 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 11:43:12.961 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 11:43:12.962 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 11:43:12.966 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 11:43:12.966 +05:30  INF]  Hosting environment: Development
+[2022-12-12 11:43:12.966 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 11:43:23.104 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 11:43:23.163 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:43:23.184 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:43:24.531 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:43:25.603 +05:30  INF]  Executed DbCommand (63ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:43:25.798 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:43:26.129 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 2940.4234ms
+[2022-12-12 11:43:26.130 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:43:26.136 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 3034.2280ms
+[2022-12-12 11:44:39.389 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 11:44:39.398 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 11:44:39.398 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:44:39.399 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 11:44:39.403 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 11:44:39.435 +05:30  INF]  Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 11:44:39.448 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 11:44:39.449 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 50.0196ms
+[2022-12-12 11:44:39.449 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 11:44:39.449 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 60.1627ms
+[2022-12-12 12:05:14.804 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 12:05:14.805 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:05:14.805 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:05:14.805 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:05:14.857 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:05:14.960 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:05:14.961 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:05:14.962 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 155.9938ms
+[2022-12-12 12:05:14.962 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:05:14.962 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 158.2234ms
+[2022-12-12 12:06:54.547 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 12:06:54.859 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 12:06:54.861 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 12:06:54.869 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 12:06:54.871 +05:30  INF]  Hosting environment: Development
+[2022-12-12 12:06:54.873 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 12:06:55.389 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/ - -
+[2022-12-12 12:06:55.471 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/ - - - 404 0 - 84.4363ms
+[2022-12-12 12:07:10.434 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 12:07:10.440 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:07:10.445 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:07:10.473 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:11:22.937 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 12:11:23.109 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 12:11:23.109 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 12:11:23.114 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 12:11:23.115 +05:30  INF]  Hosting environment: Development
+[2022-12-12 12:11:23.115 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 12:11:46.930 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 12:11:46.978 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:11:46.981 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:11:46.997 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:11:47.913 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:11:48.765 +05:30  INF]  Executed DbCommand (34ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:11:48.950 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:11:49.054 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 2051.0239ms
+[2022-12-12 12:11:49.054 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:11:49.062 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 2135.0580ms
+[2022-12-12 12:32:22.390 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - -
+[2022-12-12 12:32:22.404 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:32:22.406 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:22.409 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:32:22.440 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:32:22.628 +05:30  INF]  Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:32:22.653 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:32:22.658 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 248.652ms
+[2022-12-12 12:32:22.658 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:22.658 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - - - 200 8242 application/json;+charset=utf-8 270.2245ms
+[2022-12-12 12:32:23.691 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - -
+[2022-12-12 12:32:23.692 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:32:23.693 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:23.693 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:32:23.802 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:32:23.818 +05:30  INF]  Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:32:23.821 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:32:23.823 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 130.5859ms
+[2022-12-12 12:32:23.824 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:23.824 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - - - 200 8242 application/json;+charset=utf-8 133.1024ms
+[2022-12-12 12:32:23.902 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - -
+[2022-12-12 12:32:23.903 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:32:23.903 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:23.903 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:32:23.905 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:32:23.910 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:32:23.913 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:32:23.916 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 12.9259ms
+[2022-12-12 12:32:23.917 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:23.917 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - - - 200 8242 application/json;+charset=utf-8 14.8825ms
+[2022-12-12 12:32:24.116 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - -
+[2022-12-12 12:32:24.117 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:32:24.117 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:24.117 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:32:24.119 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:32:24.122 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:32:24.124 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:32:24.125 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 8.4597ms
+[2022-12-12 12:32:24.125 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:32:24.126 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=TGV - - - 200 8242 application/json;+charset=utf-8 9.2154ms
+[2022-12-12 12:33:01.042 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 12:33:01.042 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:33:01.042 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:33:01.043 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:33:01.045 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:33:01.100 +05:30  INF]  Executed DbCommand (50ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:33:01.101 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:33:01.101 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 58.6126ms
+[2022-12-12 12:33:01.101 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:33:01.101 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 60.0129ms
+[2022-12-12 12:33:39.789 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 12:33:39.789 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:33:39.789 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:33:39.790 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:33:39.801 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:33:39.821 +05:30  INF]  Executed DbCommand (18ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:33:39.828 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:33:39.828 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 38.2625ms
+[2022-12-12 12:33:39.828 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:33:39.829 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 40.0556ms
+[2022-12-12 12:35:00.943 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 12:35:00.944 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:35:00.944 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:00.944 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:35:00.946 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:35:00.988 +05:30  INF]  Executed DbCommand (38ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:35:00.989 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:35:00.989 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 44.8287ms
+[2022-12-12 12:35:00.990 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:00.990 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 47.3778ms
+[2022-12-12 12:35:18.232 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - -
+[2022-12-12 12:35:18.232 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:35:18.232 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:18.232 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:35:18.233 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:35:18.237 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:35:18.238 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:35:18.239 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 6.3148ms
+[2022-12-12 12:35:18.239 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:18.239 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=TGV - - - 200 659 application/json;+charset=utf-8 7.0300ms
+[2022-12-12 12:35:34.353 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - -
+[2022-12-12 12:35:34.354 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:35:34.354 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:34.354 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:35:34.355 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:35:34.408 +05:30  INF]  Executed DbCommand (19ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:35:34.408 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:35:34.409 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 54.8948ms
+[2022-12-12 12:35:34.409 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:34.409 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - - - 200 659 application/json;+charset=utf-8 55.6710ms
+[2022-12-12 12:35:39.062 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandlerd - -
+[2022-12-12 12:35:39.062 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:35:39.062 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:39.062 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:35:39.064 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:35:39.067 +05:30  INF]  Executed DbCommand (1ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:35:39.067 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:35:39.067 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 5.1017ms
+[2022-12-12 12:35:39.068 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:39.068 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandlerd - - - 200 2 application/json;+charset=utf-8 6.1851ms
+[2022-12-12 12:35:41.987 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - -
+[2022-12-12 12:35:41.987 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:35:41.987 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:41.987 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:35:41.988 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:35:41.992 +05:30  INF]  Executed DbCommand (2ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:35:41.993 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:35:41.994 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 6.2609ms
+[2022-12-12 12:35:41.994 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:35:41.994 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - - - 200 659 application/json;+charset=utf-8 6.9050ms
+[2022-12-12 12:37:06.152 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 12:37:06.152 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:37:06.153 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:37:06.153 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:37:06.155 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:37:06.199 +05:30  INF]  Executed DbCommand (39ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:37:06.200 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:37:06.201 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 47.7465ms
+[2022-12-12 12:37:06.201 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:37:06.201 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 49.2216ms
+[2022-12-12 12:38:16.294 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=GHU - -
+[2022-12-12 12:38:16.295 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:38:16.295 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:16.295 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:38:16.296 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:38:16.368 +05:30  INF]  Executed DbCommand (71ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:38:16.369 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:38:16.369 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 74.5239ms
+[2022-12-12 12:38:16.369 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:16.370 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=GHU - - - 200 555 application/json;+charset=utf-8 75.2737ms
+[2022-12-12 12:38:23.282 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=GHUb - -
+[2022-12-12 12:38:23.283 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:38:23.283 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:23.284 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:38:23.286 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:38:23.315 +05:30  INF]  Executed DbCommand (26ms) [Parameters=[@__searchValues_Title_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Title_0 LIKE N'') OR (CHARINDEX(@__searchValues_Title_0, [p].[Title]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:38:23.316 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:38:23.316 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 32.1464ms
+[2022-12-12 12:38:23.316 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:23.316 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Title=GHUb - - - 200 2 application/json;+charset=utf-8 34.1824ms
+[2022-12-12 12:38:39.000 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=GHU - -
+[2022-12-12 12:38:39.000 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:38:39.000 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:39.002 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:38:39.004 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:38:39.045 +05:30  INF]  Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:38:39.046 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:38:39.048 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 45.5966ms
+[2022-12-12 12:38:39.048 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:39.048 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?=GHU - - - 200 8242 application/json;+charset=utf-8 48.3974ms
+[2022-12-12 12:38:44.360 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 12:38:44.360 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:38:44.361 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:44.361 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:38:44.365 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:38:44.409 +05:30  INF]  Executed DbCommand (40ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:38:44.411 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:38:44.413 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 52.3137ms
+[2022-12-12 12:38:44.413 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:38:44.414 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 54.1863ms
+[2022-12-12 12:41:37.395 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Stinson - -
+[2022-12-12 12:41:37.395 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:41:37.395 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:37.395 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:41:37.396 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:41:37.440 +05:30  INF]  Executed DbCommand (41ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:41:37.440 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:41:37.441 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 46.0254ms
+[2022-12-12 12:41:37.441 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:37.441 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Stinson - - - 200 575 application/json;+charset=utf-8 46.6495ms
+[2022-12-12 12:41:54.214 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=insurance - -
+[2022-12-12 12:41:54.214 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:41:54.215 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:54.215 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:41:54.215 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:41:54.219 +05:30  INF]  Executed DbCommand (0ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:41:54.219 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:41:54.219 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 4.4329ms
+[2022-12-12 12:41:54.219 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:54.219 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=insurance - - - 200 2 application/json;+charset=utf-8 5.2946ms
+[2022-12-12 12:41:58.142 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Description=insurance - -
+[2022-12-12 12:41:58.143 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:41:58.143 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:58.143 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:41:58.145 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:41:58.208 +05:30  INF]  Executed DbCommand (25ms) [Parameters=[@__searchValues_Description_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Description_0 LIKE N'') OR (CHARINDEX(@__searchValues_Description_0, [p].[Description]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:41:58.209 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:41:58.210 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 66.6713ms
+[2022-12-12 12:41:58.210 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:41:58.210 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Description=insurance - - - 200 4383 application/json;+charset=utf-8 68.0842ms
+[2022-12-12 12:46:07.059 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 12:46:07.060 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 12:46:07.060 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:46:07.060 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 12:46:07.061 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 12:46:07.087 +05:30  INF]  Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 12:46:07.089 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 12:46:07.089 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 29.4545ms
+[2022-12-12 12:46:07.089 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 12:46:07.090 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 30.3097ms
+[2022-12-12 13:05:33.643 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 13:05:33.644 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 13:05:33.644 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 13:05:33.644 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 13:05:33.644 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 13:05:33.793 +05:30  INF]  Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 13:05:33.794 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 13:05:33.796 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 151.9147ms
+[2022-12-12 13:05:33.796 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 13:05:33.796 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 152.6044ms
+[2022-12-12 14:24:15.475 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 14:24:15.480 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 14:24:15.481 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:24:15.482 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 14:24:15.490 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 14:24:15.608 +05:30  INF]  Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 14:24:15.610 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 14:24:15.611 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 127.8308ms
+[2022-12-12 14:24:15.611 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:24:15.611 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 137.1648ms
+[2022-12-12 14:25:25.667 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 14:25:25.668 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 14:25:25.668 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:25:25.668 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 14:25:25.669 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 14:25:25.691 +05:30  INF]  Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 14:25:25.691 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 14:25:25.693 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 25.1764ms
+[2022-12-12 14:25:25.693 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:25:25.694 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 26.2485ms
+[2022-12-12 14:26:27.181 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 14:26:27.181 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 14:26:27.181 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:26:27.181 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 14:26:27.182 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 14:26:27.202 +05:30  INF]  Executed DbCommand (19ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 14:26:27.203 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 14:26:27.205 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 23.5456ms
+[2022-12-12 14:26:27.205 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:26:27.205 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 24.0695ms
+[2022-12-12 14:28:28.584 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 14:28:28.585 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 14:28:28.585 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:28:28.586 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 14:28:28.587 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 14:28:28.611 +05:30  INF]  Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 14:28:28.613 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 14:28:28.614 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 28.027ms
+[2022-12-12 14:28:28.614 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 14:28:28.614 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 29.4141ms
+[2022-12-12 15:41:45.826 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:41:45.842 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:41:45.843 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:41:45.845 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:41:45.860 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:41:45.995 +05:30  INF]  Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:41:45.999 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:41:46.000 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 155.8162ms
+[2022-12-12 15:41:46.001 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:41:46.001 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 175.4197ms
+[2022-12-12 15:41:47.082 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:41:47.082 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:41:47.082 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:41:47.082 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:41:47.082 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:41:47.096 +05:30  INF]  Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:41:47.096 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:41:47.098 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 15.8186ms
+[2022-12-12 15:41:47.098 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:41:47.098 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 16.2682ms
+[2022-12-12 15:48:27.455 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:48:27.455 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:48:27.455 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:48:27.455 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:48:27.456 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:48:27.557 +05:30  INF]  Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:48:27.557 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:48:27.558 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 102.3772ms
+[2022-12-12 15:48:27.558 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:48:27.558 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 103.0783ms
+[2022-12-12 15:49:11.496 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:49:11.497 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:49:11.497 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:49:11.497 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:49:11.501 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:49:11.529 +05:30  INF]  Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:49:11.530 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:49:11.534 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 36.7266ms
+[2022-12-12 15:49:11.534 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:49:11.534 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 38.4965ms
+[2022-12-12 15:49:46.394 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:49:46.394 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:49:46.394 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:49:46.394 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:49:46.397 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:49:46.420 +05:30  INF]  Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:49:46.422 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:49:46.423 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 28.1836ms
+[2022-12-12 15:49:46.423 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:49:46.423 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 29.4691ms
+[2022-12-12 15:50:25.770 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:50:25.770 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:50:25.770 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:50:25.770 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:50:25.770 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:50:25.798 +05:30  INF]  Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:50:25.798 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:50:25.799 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 29.0146ms
+[2022-12-12 15:50:25.799 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:50:25.799 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 29.4434ms
+[2022-12-12 15:51:10.693 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:51:10.693 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:51:10.693 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:51:10.693 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:51:10.695 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:51:10.745 +05:30  INF]  Executed DbCommand (47ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:51:10.746 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:51:10.748 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 54.7957ms
+[2022-12-12 15:51:10.748 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:51:10.748 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 55.2479ms
+[2022-12-12 15:51:48.770 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:51:48.770 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:51:48.770 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:51:48.770 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:51:48.771 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:51:48.824 +05:30  INF]  Executed DbCommand (52ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:51:48.825 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:51:48.825 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 54.4615ms
+[2022-12-12 15:51:48.825 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:51:48.825 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 54.8364ms
+[2022-12-12 15:52:45.409 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 15:52:45.409 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:52:45.409 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:52:45.409 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:52:45.409 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:52:45.481 +05:30  INF]  Executed DbCommand (71ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 15:52:45.482 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 15:52:45.482 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 73.0342ms
+[2022-12-12 15:52:45.482 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 15:52:45.482 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 73.3706ms
+[2022-12-12 15:52:51.020 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=3 - -
+[2022-12-12 15:52:51.020 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:52:51.023 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=3 - - - 204 - - 2.9034ms
+[2022-12-12 15:52:51.024 +05:30  INF]  Request starting HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=3 - -
+[2022-12-12 15:52:51.024 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:52:51.024 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 15:52:51.040 +05:30  INF]  Route matched with {action = "DeletePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePolicy(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:52:51.049 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:52:51.091 +05:30  INF]  Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+FROM [policy] AS [p]
+WHERE [p].[PolicyId] = @__p_0
+[2022-12-12 15:52:51.243 +05:30  INF]  Executed DbCommand (17ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [HouseDetailId] = @p4, [InsuredAmount] = @p5, [InsuredHolderAge] = @p6, [InsuredName] = @p7, [IsActive] = @p8, [PolicyTypeId] = @p9, [Premium] = @p10, [StartDate] = @p11, [Title] = @p12, [VehicleDetailId] = @p13
+WHERE [PolicyId] = @p14;
+SELECT @@ROWCOUNT;
+[2022-12-12 15:52:51.257 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-12-12 15:52:51.270 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API) in 229.7285ms
+[2022-12-12 15:52:51.270 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 15:52:51.270 +05:30  INF]  Request finished HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=3 - - - 200 49 application/json;+charset=utf-8 246.3550ms
+[2022-12-12 15:52:51.275 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - -
+[2022-12-12 15:52:51.275 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:52:51.275 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 15:52:51.277 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:52:51.288 +05:30  INF]  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[2022-12-12 15:52:51.310 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 32.9976ms
+[2022-12-12 15:52:51.310 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 15:52:51.310 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - - - 400 253 application/problem+json;+charset=utf-8 35.0074ms
+[2022-12-12 15:56:21.425 +05:30  INF]  Request starting HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=19 - -
+[2022-12-12 15:56:21.425 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 15:56:21.425 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 15:56:21.425 +05:30  INF]  Route matched with {action = "DeletePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePolicy(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 15:56:21.426 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 15:56:21.437 +05:30  INF]  Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+FROM [policy] AS [p]
+WHERE [p].[PolicyId] = @__p_0
+[2022-12-12 15:56:21.460 +05:30  INF]  Executed DbCommand (18ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [HouseDetailId] = @p4, [InsuredAmount] = @p5, [InsuredHolderAge] = @p6, [InsuredName] = @p7, [IsActive] = @p8, [PolicyTypeId] = @p9, [Premium] = @p10, [StartDate] = @p11, [Title] = @p12, [VehicleDetailId] = @p13
+WHERE [PolicyId] = @p14;
+SELECT @@ROWCOUNT;
+[2022-12-12 15:56:21.470 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-12-12 15:56:21.470 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API) in 45.0077ms
+[2022-12-12 15:56:21.470 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 15:56:21.470 +05:30  INF]  Request finished HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=19 - - - 200 49 application/json;+charset=utf-8 45.4328ms
+[2022-12-12 16:00:39.292 +05:30  INF]  Application is shutting down...
+[2022-12-12 16:00:46.760 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 16:00:46.876 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 16:00:46.876 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 16:00:46.884 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 16:00:46.884 +05:30  INF]  Hosting environment: Development
+[2022-12-12 16:00:46.884 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 16:01:14.963 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 16:01:15.021 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:01:15.051 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:01:16.022 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:01:16.694 +05:30  INF]  Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE [p].[IsActive] = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:01:16.855 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:01:16.944 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 1886.4139ms
+[2022-12-12 16:01:16.945 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:01:16.950 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 6565 application/json;+charset=utf-8 1991.3771ms
+[2022-12-12 16:02:10.846 +05:30  INF]  Application is shutting down...
+[2022-12-12 16:02:14.500 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 16:02:14.604 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 16:02:14.604 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 16:02:14.612 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 16:02:14.612 +05:30  INF]  Hosting environment: Development
+[2022-12-12 16:02:14.612 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 16:02:23.714 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 16:02:23.761 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:02:23.781 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:02:24.729 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:02:25.398 +05:30  INF]  Executed DbCommand (54ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:02:25.592 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:02:25.725 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 1938.4627ms
+[2022-12-12 16:02:25.725 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:02:25.731 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 8242 application/json;+charset=utf-8 2019.7676ms
+[2022-12-12 16:05:00.235 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=24 - -
+[2022-12-12 16:05:00.240 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:05:00.241 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=24 - - - 204 - - 6.4614ms
+[2022-12-12 16:05:00.245 +05:30  INF]  Request starting HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=24 - -
+[2022-12-12 16:05:00.246 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:05:00.247 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 16:05:00.249 +05:30  INF]  Route matched with {action = "DeletePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePolicy(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:05:00.258 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:05:00.281 +05:30  INF]  Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+FROM [policy] AS [p]
+WHERE [p].[PolicyId] = @__p_0
+[2022-12-12 16:05:00.389 +05:30  INF]  Executed DbCommand (5ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [HouseDetailId] = @p4, [InsuredAmount] = @p5, [InsuredHolderAge] = @p6, [InsuredName] = @p7, [IsActive] = @p8, [PolicyTypeId] = @p9, [Premium] = @p10, [StartDate] = @p11, [Title] = @p12, [VehicleDetailId] = @p13
+WHERE [PolicyId] = @p14;
+SELECT @@ROWCOUNT;
+[2022-12-12 16:05:00.409 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-12-12 16:05:00.423 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API) in 173.8481ms
+[2022-12-12 16:05:00.423 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 16:05:00.424 +05:30  INF]  Request finished HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=24 - - - 200 49 application/json;+charset=utf-8 178.2670ms
+[2022-12-12 16:05:00.447 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - -
+[2022-12-12 16:05:00.447 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:05:00.447 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 16:05:00.448 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:05:00.452 +05:30  INF]  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[2022-12-12 16:05:00.470 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 22.4717ms
+[2022-12-12 16:05:00.471 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 16:05:00.471 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - - - 400 253 application/problem+json;+charset=utf-8 24.1563ms
+[2022-12-12 16:06:06.582 +05:30  INF]  Request starting HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=25 - -
+[2022-12-12 16:06:06.582 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:06:06.582 +05:30  INF]  Request finished HTTP/2 OPTIONS https://localhost:7024/Policy/DeletePolicy?PolicyId=25 - - - 204 - - 0.4014ms
+[2022-12-12 16:06:06.584 +05:30  INF]  Request starting HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=25 - -
+[2022-12-12 16:06:06.584 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:06:06.584 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 16:06:06.584 +05:30  INF]  Route matched with {action = "DeletePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePolicy(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:06:06.655 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:06:06.662 +05:30  INF]  Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+FROM [policy] AS [p]
+WHERE [p].[PolicyId] = @__p_0
+[2022-12-12 16:06:06.684 +05:30  INF]  Executed DbCommand (20ms) [Parameters=[@p14='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [HouseDetailId] = @p4, [InsuredAmount] = @p5, [InsuredHolderAge] = @p6, [InsuredName] = @p7, [IsActive] = @p8, [PolicyTypeId] = @p9, [Premium] = @p10, [StartDate] = @p11, [Title] = @p12, [VehicleDetailId] = @p13
+WHERE [PolicyId] = @p14;
+SELECT @@ROWCOUNT;
+[2022-12-12 16:06:06.686 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-12-12 16:06:06.687 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API) in 102.7408ms
+[2022-12-12 16:06:06.687 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-12-12 16:06:06.687 +05:30  INF]  Request finished HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=25 - - - 200 49 application/json;+charset=utf-8 103.3481ms
+[2022-12-12 16:06:06.691 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - -
+[2022-12-12 16:06:06.692 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:06:06.692 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 16:06:06.692 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:06:06.692 +05:30  INF]  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[2022-12-12 16:06:06.692 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 0.5776ms
+[2022-12-12 16:06:06.692 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-12-12 16:06:06.692 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=undefined - - - 400 253 application/problem+json;+charset=utf-8 1.3429ms
+[2022-12-12 16:06:33.924 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 16:06:33.924 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:06:33.925 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:06:33.925 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:06:33.926 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:06:33.942 +05:30  INF]  Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:06:33.944 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:06:33.945 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 20.1074ms
+[2022-12-12 16:06:33.945 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:06:33.945 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 8242 application/json;+charset=utf-8 20.8974ms
+[2022-12-12 16:13:35.331 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 16:13:35.452 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 16:13:35.453 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 16:13:35.468 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 16:13:35.468 +05:30  INF]  Hosting environment: Development
+[2022-12-12 16:13:35.468 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 16:13:44.888 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 16:13:44.935 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:13:44.953 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:13:45.698 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:13:46.204 +05:30  INF]  Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:13:46.332 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:13:46.413 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 1453.6558ms
+[2022-12-12 16:13:46.413 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:13:46.429 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 5347 application/json;+charset=utf-8 1543.2384ms
+[2022-12-12 16:14:30.169 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - -
+[2022-12-12 16:14:30.174 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 16:14:30.174 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:14:30.174 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:14:30.182 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:14:30.190 +05:30  INF]  Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:14:30.192 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:14:30.193 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 18.5403ms
+[2022-12-12 16:14:30.193 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:14:30.193 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?= - - - 200 5347 application/json;+charset=utf-8 24.2604ms
+[2022-12-12 16:16:17.484 +05:30  INF]  Application is shutting down...
+[2022-12-12 16:16:21.209 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-12-12 16:16:21.324 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-12-12 16:16:21.325 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-12-12 16:16:21.329 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-12-12 16:16:21.330 +05:30  INF]  Hosting environment: Development
+[2022-12-12 16:16:21.330 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\PolicyManagementSystem\Policy_Management_System_API\
+[2022-12-12 16:16:30.734 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-12-12 16:16:30.851 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:16:30.901 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 16:16:32.938 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 16:16:34.112 +05:30  INF]  Executed DbCommand (67ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 16:16:34.391 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 16:16:34.556 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 3645.4577ms
+[2022-12-12 16:16:34.557 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 16:16:34.563 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 5338 application/json;+charset=utf-8 3835.9169ms
+[2022-12-12 17:20:20.150 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Dia - -
+[2022-12-12 17:20:20.157 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 17:20:20.158 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 17:20:20.159 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 17:20:20.168 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 17:20:20.345 +05:30  INF]  Executed DbCommand (33ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 17:20:20.348 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 17:20:20.351 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 191.9586ms
+[2022-12-12 17:20:20.351 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 17:20:20.352 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Dia - - - 200 2 application/json;+charset=utf-8 203.3065ms
+[2022-12-12 17:21:34.111 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Description=nn - -
+[2022-12-12 17:21:34.114 +05:30  INF]  CORS policy execution successful.
+[2022-12-12 17:21:34.115 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 17:21:34.115 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-12-12 17:21:34.227 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-12-12 17:21:34.286 +05:30  INF]  Executed DbCommand (32ms) [Parameters=[@__searchValues_Description_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_Description_0 LIKE N'') OR (CHARINDEX(@__searchValues_Description_0, [p].[Description]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-12-12 17:21:34.286 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-12-12 17:21:34.287 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 171.9691ms
+[2022-12-12 17:21:34.287 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-12-12 17:21:34.287 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?Description=nn - - - 200 2 application/json;+charset=utf-8 176.3153ms

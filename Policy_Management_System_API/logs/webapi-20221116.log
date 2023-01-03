@@ -1,0 +1,645 @@
+[2022-11-16 09:57:20.155 +05:30  INF]  Application is shutting down...
+[2022-11-16 09:57:31.481 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 09:57:31.981 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 09:57:31.982 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 09:57:31.992 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 09:57:31.993 +05:30  INF]  Hosting environment: Development
+[2022-11-16 09:57:31.993 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 09:57:35.955 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 09:57:36.104 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 151.7731ms
+[2022-11-16 09:57:36.140 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 09:57:36.140 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-16 09:57:36.140 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-11-16 09:57:36.179 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 09:57:36.180 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-16 09:57:36.182 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 41.3158ms
+[2022-11-16 09:57:36.182 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 41.8408ms
+[2022-11-16 09:57:36.187 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-16 09:57:36.187 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 46.7921ms
+[2022-11-16 09:57:36.415 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 09:57:36.557 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 142.0282ms
+[2022-11-16 09:57:43.060 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-11-16 09:57:43.067 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 09:57:43.089 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 09:57:44.137 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 09:57:45.234 +05:30  INF]  Executed DbCommand (43ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 09:57:45.402 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereListIterator`1[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 09:57:45.495 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 2398.5831ms
+[2022-11-16 09:57:45.495 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 09:57:45.498 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 9272 application/json;+charset=utf-8 2437.8172ms
+[2022-11-16 09:58:16.371 +05:30  INF]  Application is shutting down...
+[2022-11-16 09:58:19.979 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 09:58:20.119 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 09:58:20.119 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 09:58:20.124 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 09:58:20.124 +05:30  INF]  Hosting environment: Development
+[2022-11-16 09:58:20.124 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 09:58:28.988 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-11-16 09:58:29.035 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 09:58:29.053 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 09:58:30.046 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 09:58:30.741 +05:30  INF]  Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 09:58:31.003 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 09:58:31.202 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 2135.3933ms
+[2022-11-16 09:58:31.202 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 09:58:31.225 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 1546 application/json;+charset=utf-8 2239.1050ms
+[2022-11-16 10:40:50.935 +05:30  INF]  Application is shutting down...
+[2022-11-16 10:40:56.749 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 10:40:56.967 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 10:40:56.977 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 10:40:56.982 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 10:40:56.982 +05:30  INF]  Hosting environment: Development
+[2022-11-16 10:40:56.982 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 12:48:26.552 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 12:48:26.714 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 166.0728ms
+[2022-11-16 12:48:26.734 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 12:48:26.734 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-11-16 12:48:26.734 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-16 12:48:26.770 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 12:48:26.770 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-16 12:48:26.772 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 37.7143ms
+[2022-11-16 12:48:26.772 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 37.5933ms
+[2022-11-16 12:48:26.786 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-16 12:48:26.786 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 51.9181ms
+[2022-11-16 12:48:26.903 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 12:48:27.000 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 97.6722ms
+[2022-11-16 12:54:02.796 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392
+[2022-11-16 12:54:02.810 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 12:54:02.826 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:54:02.913 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 12:54:03.704 +05:30  ERR]  PolicyController :CreatePolicy()-Policy's End date sholud not be same as start date or it should not be in past   at Policy_Management_System_API.PolicyValidation.IsPolicyValid(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Validations\PolicyValidation.cs:line 33
+   at Policy_Management_System_API.PolicyService.CreatePolicy(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Services\PolicyService.cs:line 18
+   at Policy_Management_System_API.PolicyController.CreatePolicy(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Controllers\PolicyController.cs:line 29
+[2022-11-16 12:54:03.714 +05:30  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2022-11-16 12:54:03.847 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 921.8425ms
+[2022-11-16 12:54:03.849 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:54:03.851 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392 - 500 240 application/problem+json;+charset=utf-8 1054.9977ms
+[2022-11-16 12:55:46.779 +05:30  INF]  Application is shutting down...
+[2022-11-16 12:55:59.332 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 12:55:59.927 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 12:55:59.927 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 12:55:59.933 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 12:55:59.933 +05:30  INF]  Hosting environment: Development
+[2022-11-16 12:55:59.933 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 12:56:04.581 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392
+[2022-11-16 12:56:04.616 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 12:56:04.619 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:56:04.634 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 12:56:04.873 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 235.3803ms
+[2022-11-16 12:56:04.874 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:56:04.943 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.ComponentModel.DataAnnotations.ValidationException: Policy's End date sholud not be same as start date or it should not be in past
+   at Policy_Management_System_API.PolicyValidation.IsPolicyValid(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Validations\PolicyValidation.cs:line 33
+   at Policy_Management_System_API.PolicyController.CreatePolicy(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Controllers\PolicyController.cs:line 22
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-11-16 12:56:05.056 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392 - 500 - text/plain;+charset=utf-8 478.8042ms
+[2022-11-16 12:56:40.831 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392
+[2022-11-16 12:56:40.839 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 12:56:40.839 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:56:40.840 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 12:56:43.057 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 12:56:44.465 +05:30  INF]  Executed DbCommand (127ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (DbType = Single), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [policy] ([CoverageId], [Description], [Duration], [EndDate], [InsuredAmount], [InsuredHolderAge], [InsuredName], [IsActive], [PolicyTypeId], [Premium], [StartDate], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT [PolicyId]
+FROM [policy]
+WHERE @@ROWCOUNT = 1 AND [PolicyId] = scope_identity();
+[2022-11-16 12:56:44.653 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 12:56:44.753 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 3912.6073ms
+[2022-11-16 12:56:44.753 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 12:56:44.757 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 392 - 200 50 application/json;+charset=utf-8 3925.1984ms
+[2022-11-16 13:50:33.075 +05:30  INF]  Application is shutting down...
+[2022-11-16 13:50:44.135 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 13:50:44.487 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 13:50:44.487 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 13:50:44.492 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 13:50:44.493 +05:30  INF]  Hosting environment: Development
+[2022-11-16 13:50:44.493 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 13:51:05.140 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-11-16 13:51:05.190 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:51:05.211 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:51:06.095 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:51:06.915 +05:30  INF]  Executed DbCommand (52ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 13:51:07.072 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 13:51:07.176 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 1960.9814ms
+[2022-11-16 13:51:07.177 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:51:07.181 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 1923 application/json;+charset=utf-8 2043.8530ms
+[2022-11-16 13:51:28.119 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=4 - -
+[2022-11-16 13:51:28.121 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 13:51:28.122 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:51:28.133 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:51:28.169 +05:30  INF]  Executed DbCommand (16ms) [Parameters=[@__PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM [policy] AS [p]
+INNER JOIN [coverage] AS [c] ON [p].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [p].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [p].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [p].[PolicyTypeId] = [p0].[PolicyTypeId]
+WHERE [p].[PolicyId] = @__PolicyId_0
+[2022-11-16 13:51:28.171 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 13:51:28.173 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 49.8945ms
+[2022-11-16 13:51:28.173 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 13:51:28.175 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=4 - - - 200 383 application/json;+charset=utf-8 55.5452ms
+[2022-11-16 13:52:05.636 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=3 - -
+[2022-11-16 13:52:05.637 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 13:52:05.638 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:52:05.691 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:52:05.698 +05:30  INF]  Executed DbCommand (4ms) [Parameters=[@__PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM [policy] AS [p]
+INNER JOIN [coverage] AS [c] ON [p].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [p].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [p].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [p].[PolicyTypeId] = [p0].[PolicyTypeId]
+WHERE [p].[PolicyId] = @__PolicyId_0
+[2022-11-16 13:52:05.699 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType8`14[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 13:52:05.708 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 69.9996ms
+[2022-11-16 13:52:05.708 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 13:52:05.708 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=3 - - - 200 442 application/json;+charset=utf-8 71.9938ms
+[2022-11-16 13:58:56.390 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 395
+[2022-11-16 13:58:56.396 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 13:58:56.397 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 13:58:56.398 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:58:56.465 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:58:56.752 +05:30  INF]  Executed DbCommand (33ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (DbType = Single), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [policy] ([CoverageId], [Description], [Duration], [EndDate], [InsuredAmount], [InsuredHolderAge], [InsuredName], [IsActive], [PolicyTypeId], [Premium], [StartDate], [Title])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+SELECT [PolicyId]
+FROM [policy]
+WHERE @@ROWCOUNT = 1 AND [PolicyId] = scope_identity();
+[2022-11-16 13:58:56.786 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 13:58:56.787 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 388.585ms
+[2022-11-16 13:58:56.787 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-16 13:58:56.787 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 395 - 200 50 application/json;+charset=utf-8 397.8395ms
+[2022-11-16 13:59:38.880 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-11-16 13:59:38.882 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:59:38.884 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:59:38.886 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:59:38.946 +05:30  INF]  Executed DbCommand (54ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 13:59:38.949 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 13:59:38.950 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 65.5486ms
+[2022-11-16 13:59:38.950 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:59:38.951 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 2301 application/json;+charset=utf-8 70.9246ms
+[2022-11-16 13:59:51.905 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - -
+[2022-11-16 13:59:51.905 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:59:51.905 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 13:59:51.906 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 13:59:52.076 +05:30  INF]  Executed DbCommand (19ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 4000), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 13:59:52.081 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 13:59:52.082 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 176.0217ms
+[2022-11-16 13:59:52.082 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 13:59:52.082 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Chandler - - - 200 501 application/json;+charset=utf-8 176.6884ms
+[2022-11-16 14:00:26.040 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageSize=2 - -
+[2022-11-16 14:00:26.040 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:26.040 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:00:26.041 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:00:26.060 +05:30  INF]  Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 14:00:26.060 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 14:00:26.061 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 20.1897ms
+[2022-11-16 14:00:26.061 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:26.061 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageSize=2 - - - 200 787 application/json;+charset=utf-8 20.7774ms
+[2022-11-16 14:00:41.347 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2 - -
+[2022-11-16 14:00:41.347 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:41.349 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:00:41.354 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:00:41.390 +05:30  INF]  Executed DbCommand (16ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 14:00:41.390 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 14:00:41.390 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 41.4105ms
+[2022-11-16 14:00:41.390 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:41.390 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2 - - - 200 2 application/json;+charset=utf-8 43.9247ms
+[2022-11-16 14:00:53.038 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=2 - -
+[2022-11-16 14:00:53.038 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:53.039 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:00:53.040 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:00:53.067 +05:30  INF]  Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 14:00:53.068 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 14:00:53.068 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 29.6066ms
+[2022-11-16 14:00:53.068 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:00:53.068 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=2 - - - 200 760 application/json;+charset=utf-8 30.1362ms
+[2022-11-16 14:01:07.981 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=4 - -
+[2022-11-16 14:01:07.981 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:01:07.981 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:01:07.982 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:01:07.987 +05:30  INF]  Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 14:01:07.988 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 14:01:07.988 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 6.8625ms
+[2022-11-16 14:01:07.988 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:01:07.988 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=4 - - - 200 756 application/json;+charset=utf-8 7.7809ms
+[2022-11-16 14:01:24.030 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=2 - -
+[2022-11-16 14:01:24.030 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 14:01:24.030 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:01:24.033 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:01:24.046 +05:30  INF]  Executed DbCommand (12ms) [Parameters=[@__PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM [policy] AS [p]
+INNER JOIN [coverage] AS [c] ON [p].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [p].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [p].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [p].[PolicyTypeId] = [p0].[PolicyTypeId]
+WHERE [p].[PolicyId] = @__PolicyId_0
+[2022-11-16 14:01:24.048 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType7`14[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 14:01:24.058 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 26.9426ms
+[2022-11-16 14:01:24.058 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 14:01:24.058 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=2 - - - 200 558 application/json;+charset=utf-8 28.0782ms
+[2022-11-16 14:02:15.508 +05:30  INF]  Request starting HTTP/2 PUT https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 658
+[2022-11-16 14:02:15.509 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 14:02:15.510 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 14:02:15.514 +05:30  INF]  Route matched with {action = "UpdatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:02:15.520 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:02:15.578 +05:30  INF]  Executed DbCommand (26ms) [Parameters=[@p12='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (DbType = Single), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [InsuredAmount] = @p4, [InsuredHolderAge] = @p5, [InsuredName] = @p6, [IsActive] = @p7, [PolicyTypeId] = @p8, [Premium] = @p9, [StartDate] = @p10, [Title] = @p11
+WHERE [PolicyId] = @p12;
+SELECT @@ROWCOUNT;
+[2022-11-16 14:02:15.587 +05:30  INF]  Executed DbCommand (7ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [vehicledetail] SET [IsActive] = @p0, [PolicyId] = @p1, [VehicleModel] = @p2, [VehicleNumber] = @p3
+WHERE [VehicleDetailId] = @p4;
+SELECT @@ROWCOUNT;
+[2022-11-16 14:02:15.589 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 14:02:15.590 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API) in 75.608ms
+[2022-11-16 14:02:15.590 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 14:02:15.594 +05:30  INF]  Request finished HTTP/2 PUT https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 658 - 200 49 application/json;+charset=utf-8 82.3804ms
+[2022-11-16 14:02:32.143 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=2 - -
+[2022-11-16 14:02:32.143 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 14:02:32.143 +05:30  INF]  Route matched with {action = "GetPolicyById", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPolicyById(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:02:32.146 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:02:32.224 +05:30  INF]  Executed DbCommand (77ms) [Parameters=[@__PolicyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM [policy] AS [p]
+INNER JOIN [coverage] AS [c] ON [p].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [p].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [p].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [p].[PolicyTypeId] = [p0].[PolicyTypeId]
+WHERE [p].[PolicyId] = @__PolicyId_0
+[2022-11-16 14:02:32.226 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType7`14[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 14:02:32.226 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API) in 83.1492ms
+[2022-11-16 14:02:32.226 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetPolicyById (Policy_Management_System_API)'
+[2022-11-16 14:02:32.227 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetPolicyById?PolicyId=2 - - - 200 558 application/json;+charset=utf-8 83.8820ms
+[2022-11-16 14:02:54.006 +05:30  INF]  Request starting HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=6 - -
+[2022-11-16 14:02:54.006 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 14:02:54.007 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-11-16 14:02:54.007 +05:30  INF]  Route matched with {action = "DeletePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeletePolicy(Int32) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:02:54.009 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:02:54.043 +05:30  INF]  Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+FROM [policy] AS [p]
+WHERE [p].[PolicyId] = @__p_0
+[2022-11-16 14:02:54.059 +05:30  INF]  Executed DbCommand (15ms) [Parameters=[@p12='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Single), @p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (DbType = Single), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [policy] SET [CoverageId] = @p0, [Description] = @p1, [Duration] = @p2, [EndDate] = @p3, [InsuredAmount] = @p4, [InsuredHolderAge] = @p5, [InsuredName] = @p6, [IsActive] = @p7, [PolicyTypeId] = @p8, [Premium] = @p9, [StartDate] = @p10, [Title] = @p11
+WHERE [PolicyId] = @p12;
+SELECT @@ROWCOUNT;
+[2022-11-16 14:02:54.060 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 14:02:54.060 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API) in 52.8516ms
+[2022-11-16 14:02:54.060 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.DeletePolicy (Policy_Management_System_API)'
+[2022-11-16 14:02:54.060 +05:30  INF]  Request finished HTTP/2 DELETE https://localhost:7024/Policy/DeletePolicy?PolicyId=6 - - - 200 49 application/json;+charset=utf-8 54.1248ms
+[2022-11-16 14:43:50.097 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?StartDate=2022-01-15 - -
+[2022-11-16 14:43:50.099 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:43:50.099 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 14:43:50.126 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 14:43:50.249 +05:30  INF]  Executed DbCommand (15ms) [Parameters=[@__searchValues_StartDate_0='?' (DbType = DateTime2), @__searchValues_EndDate_1='?' (DbType = DateTime2), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    WHERE ([p].[StartDate] = @__searchValues_StartDate_0) OR ([p].[EndDate] = @__searchValues_EndDate_1)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 14:43:50.251 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-16 14:43:50.251 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 152.026ms
+[2022-11-16 14:43:50.251 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 14:43:50.251 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?StartDate=2022-01-15 - - - 200 2 application/json;+charset=utf-8 155.4031ms
+[2022-11-16 14:57:27.338 +05:30  INF]  Application is shutting down...
+[2022-11-16 14:57:33.238 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 14:57:33.433 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 14:57:33.434 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 14:57:33.439 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 14:57:33.440 +05:30  INF]  Hosting environment: Development
+[2022-11-16 14:57:33.440 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 14:59:22.436 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 14:59:22.583 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 151.3014ms
+[2022-11-16 14:59:22.604 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 14:59:22.631 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 14:59:22.634 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 29.9356ms
+[2022-11-16 14:59:22.806 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 14:59:22.819 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - -
+[2022-11-16 14:59:22.820 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-16 14:59:22.820 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - - - 200 628 image/png 1.2033ms
+[2022-11-16 14:59:23.049 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 242.7239ms
+[2022-11-16 15:01:45.486 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=insuredname - -
+[2022-11-16 15:01:45.501 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:01:45.553 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 15:01:47.431 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 15:01:48.763 +05:30  INF]  Executed DbCommand (92ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 15:01:49.100 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 15:01:49.325 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 3760.7943ms
+[2022-11-16 15:01:49.325 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:01:49.330 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=insuredname - - - 200 2301 application/json;+charset=utf-8 3843.7799ms
+[2022-11-16 15:02:23.259 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=startdate - -
+[2022-11-16 15:02:23.262 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:02:23.262 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 15:02:23.266 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 15:02:23.303 +05:30  INF]  Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 15:02:23.310 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 15:02:23.313 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 50.6399ms
+[2022-11-16 15:02:23.313 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:02:23.314 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=startdate - - - 200 2301 application/json;+charset=utf-8 54.9354ms
+[2022-11-16 15:03:02.403 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortBy=startdate - -
+[2022-11-16 15:03:02.404 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:03:02.404 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 15:03:02.533 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 15:03:02.569 +05:30  INF]  Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 15:03:02.571 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 15:03:02.573 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 168.3961ms
+[2022-11-16 15:03:02.573 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:03:02.573 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortBy=startdate - - - 200 2301 application/json;+charset=utf-8 169.7924ms
+[2022-11-16 15:04:29.940 +05:30  INF]  Application is shutting down...
+[2022-11-16 15:04:33.268 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 15:04:33.383 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 15:04:33.384 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 15:04:33.387 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 15:04:33.388 +05:30  INF]  Hosting environment: Development
+[2022-11-16 15:04:33.388 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 15:04:37.311 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 15:04:37.397 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 89.9857ms
+[2022-11-16 15:04:37.417 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 15:04:37.439 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 15:04:37.444 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 26.6683ms
+[2022-11-16 15:04:37.726 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 15:04:37.747 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - -
+[2022-11-16 15:04:37.748 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-16 15:04:37.748 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - - - 200 628 image/png 0.7321ms
+[2022-11-16 15:04:37.831 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 105.3978ms
+[2022-11-16 15:04:58.697 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=End%20Date - -
+[2022-11-16 15:04:58.708 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:04:58.753 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 15:05:00.713 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-16 15:05:02.153 +05:30  INF]  Executed DbCommand (58ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[PolicyId], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [h].[PolicyId], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[PolicyId] = [v].[PolicyId]
+LEFT JOIN [housedetail] AS [h] ON [t].[PolicyId] = [h].[PolicyId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-16 15:05:02.454 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.OrderedEnumerable`2[[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Nullable`1[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-16 15:05:02.769 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 4004.4149ms
+[2022-11-16 15:05:02.769 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-16 15:05:02.775 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?SortType=asc&SortBy=End%20Date - - - 200 2301 application/json;+charset=utf-8 4078.4793ms
+[2022-11-16 15:08:14.095 +05:30  INF]  Application is shutting down...
+[2022-11-16 15:08:17.370 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 15:08:17.535 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 15:08:17.535 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 15:08:17.539 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 15:08:17.539 +05:30  INF]  Hosting environment: Development
+[2022-11-16 15:08:17.539 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 21:08:27.047 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-16 21:08:27.533 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-16 21:08:27.534 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-16 21:08:27.538 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-16 21:08:27.538 +05:30  INF]  Hosting environment: Development
+[2022-11-16 21:08:27.538 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-16 21:08:34.169 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 21:08:34.268 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 101.4830ms
+[2022-11-16 21:08:34.314 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 21:08:34.328 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 21:08:34.329 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 14.6212ms
+[2022-11-16 21:08:34.548 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 21:08:34.551 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - -
+[2022-11-16 21:08:34.551 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-16 21:08:34.552 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - - - 200 628 image/png 0.7332ms
+[2022-11-16 21:08:34.678 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.9341ms
+[2022-11-16 21:09:07.240 +05:30  INF]  Request starting HTTP/2 PATCH https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 912
+[2022-11-16 21:09:07.247 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 21:09:07.253 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 21:09:07.272 +05:30  INF]  Route matched with {action = "UpdatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 21:09:07.556 +05:30  INF]  Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+[2022-11-16 21:09:07.608 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API) in 332.9038ms
+[2022-11-16 21:09:07.609 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 21:09:07.610 +05:30  INF]  Request finished HTTP/2 PATCH https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 912 - 400 873 application/problem+json;+charset=utf-8 370.1339ms
+[2022-11-16 21:09:46.989 +05:30  INF]  Request starting HTTP/2 PATCH https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 296
+[2022-11-16 21:09:46.991 +05:30  INF]  CORS policy execution successful.
+[2022-11-16 21:09:46.991 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 21:09:46.991 +05:30  INF]  Route matched with {action = "UpdatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdatePolicy(Policy_Management_System_API.Policy) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-16 21:09:47.011 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API) in 19.6218ms
+[2022-11-16 21:09:47.011 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.UpdatePolicy (Policy_Management_System_API)'
+[2022-11-16 21:09:47.067 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.ComponentModel.DataAnnotations.ValidationException: Insured person's age should not be less than 18
+   at Policy_Management_System_API.PolicyValidation.IsPolicyValid(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Validations\PolicyValidation.cs:line 24
+   at Policy_Management_System_API.PolicyController.UpdatePolicy(Policy policy) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Controllers\PolicyController.cs:line 82
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-11-16 21:09:47.075 +05:30  INF]  Request finished HTTP/2 PATCH https://localhost:7024/Policy/UpdatePolicy application/json-patch+json 296 - 500 - text/plain;+charset=utf-8 85.6110ms
+[2022-11-16 21:10:25.101 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-16 21:10:25.102 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 0.5198ms
+[2022-11-16 21:10:25.120 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-16 21:10:25.124 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-16 21:10:25.125 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 4.8365ms
+[2022-11-16 21:10:25.286 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-16 21:10:25.295 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 9.4758ms
+[2022-11-16 21:10:25.296 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - -
+[2022-11-16 21:10:25.296 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-16 21:10:25.296 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - - - 200 628 image/png 0.4450ms

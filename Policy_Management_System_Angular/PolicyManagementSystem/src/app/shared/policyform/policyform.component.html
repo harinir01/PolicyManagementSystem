@@ -1,0 +1,210 @@
+<div class="margin">
+    <header>
+      <h1 style="text-align: center;">Policy Management System</h1>
+    </header>
+    <div class="container d-flex justify-content-center card mt-5 mb-5">
+      <form [formGroup]="policyForm" class="card-body">
+        <div *ngIf="type=='view'">
+          <h1 style="text-align: center;">View Policy</h1>
+        </div>
+        <div *ngIf="policyid>0 && type=='edit';">
+          <h1 style="text-align: center;">Edit Policy</h1> 
+        </div> 
+        <div *ngIf="policyid==0 && type=='create';">
+          <h1 style="text-align: center;">Create Policy</h1>
+        </div> 
+        <div class="input-group">
+          <label for="Title">Title</label>
+          <input type="text" name="Title" id="Title" placeholder="Enter Policy Title" value="" 
+            [class.is-invalid]="(formSubmitted && policyForm.controls['Title'].invalid )||policyForm.controls['Title'].invalid && policyForm.controls['Title'].touched"
+            formControlName="Title">
+          <div *ngIf="(formSubmitted)||policyForm.controls['Title'].invalid && policyForm.controls['Title'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['Title'].errors?.['required']">Title is
+              required</span>
+            <span class="text-danger" *ngIf="policyForm.controls['Title'].errors?.['minlength']">Title is
+              too short</span>
+            <span class="text-danger" *ngIf="policyForm.controls['Title'].errors?.['maxlength']">Title is
+              too long</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="Description">Description</label>
+          <input type="text" name="Description" id="Description" placeholder="Enter Policy Description"
+            [class.is-invalid]="(formSubmitted && policyForm.controls['Description'].invalid )||policyForm.controls['Description'].invalid && policyForm.controls['Description'].touched"
+            formControlName="Description">
+          <div
+            *ngIf="(formSubmitted)||policyForm.controls['Description'].invalid && policyForm.controls['Description'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['Description'].errors?.['required']">Description is
+              required</span>
+            <span class="text-danger" *ngIf="policyForm.controls['Description'].errors?.['minlength']">Description is
+              too short</span>
+            <span class="text-danger" *ngIf="policyForm.controls['Description'].errors?.['maxlength']">Description is
+              too long</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <!-- <div *ngIf="policyId==0; else x"> -->
+            <label for="Start date">Start Date</label>
+            <input type="date" name="startdate" id="startdate" [readonly]="disabledValue"
+              [class.is-invalid]="(formSubmitted && policyForm.controls['StartDate'].invalid)||policyForm.controls['StartDate'].invalid && policyForm.controls['StartDate'].touched"
+              name="startdate" id="startdate" name="startdate" formControlName="StartDate">
+            <div
+              *ngIf="(formSubmitted)||policyForm.controls['StartDate'].invalid && policyForm.controls['StartDate'].touched">
+              <span class="text-danger" *ngIf="policyForm.controls['StartDate'].errors?.['required']">Start Date of a Policy
+                is
+                required</span>
+            </div>        
+        </div>
+        <div class="input-group">
+          <label for="End date">End Date</label>
+          <input type="date" name="enddate" id="enddate" [min]="" [readonly]="disabledValue"
+            [class.is-invalid]="(formSubmitted && policyForm.controls['EndDate'].invalid)||policyForm.controls['EndDate'].invalid && policyForm.controls['EndDate'].touched"
+            name="enddate" id="enddate" name="enddate" formControlName="EndDate">
+          <div *ngIf="(formSubmitted)||policyForm.controls['EndDate'].invalid && policyForm.controls['EndDate'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['EndDate'].errors?.['required']">End Date of a Policy is
+              required</span>
+          </div>
+          <span class="text-danger" *ngIf="validateEndDateOfPolicy()">End Date of a Policy should not be less than Start
+            Date of Policy</span>
+        </div>
+  
+        <div class="input-group">
+          <label for="Insured Amount">Insured Amount</label>
+          <input type="number" name="Insured Amount" id="Insured Amount" placeholder="Enter Amount to be Insured"
+            formControlName="InsuredAmount"
+            [class.is-invalid]="(formSubmitted && policyForm.controls['InsuredAmount'].invalid )||policyForm.controls['InsuredAmount'].invalid && policyForm.controls['InsuredAmount'].touched"
+            formControlName="InsuredAmount">
+          <div
+            *ngIf="(formSubmitted)||policyForm.controls['InsuredAmount'].invalid && policyForm.controls['InsuredAmount'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['InsuredAmount'].errors?.['required']">Insured Amount is
+              required</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="Insured Name">Insured Name</label>
+          <input type="text" name="Insured Name" id="Insured Name" placeholder="Enter the Name of the Insured person"
+            formControlName="InsuredName"
+            [class.is-invalid]="(formSubmitted && policyForm.controls['InsuredName'].invalid )||policyForm.controls['InsuredName'].invalid && policyForm.controls['InsuredName'].touched"
+            formControlName="InsuredName" >
+          <div
+            *ngIf="(formSubmitted)||policyForm.controls['InsuredName'].invalid && policyForm.controls['InsuredName'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['InsuredName'].errors?.['required']">Insured Person's
+              Name is
+              required</span>
+            <span class="text-danger" *ngIf="policyForm.controls['InsuredName'].errors?.['minlength']">Insured Person's
+              Name is
+              too short</span>
+            <span class="text-danger" *ngIf="policyForm.controls['InsuredName'].errors?.['maxlength']">Insured Person's
+              Name is
+              too long</span>
+          </div>
+        </div>
+  
+        <div class="input-group">
+          <label for="Insured Holder Age">Insured Holder Age</label>
+          <input type="number" name="Insured Holder Age" id="Insured Holder Age"
+            placeholder="Enter the Age of the Insured person" formControlName="InsuredHolderAge"
+            [class.is-invalid]="(formSubmitted && policyForm.controls['InsuredHolderAge'].invalid )||policyForm.controls['InsuredHolderAge'].invalid && policyForm.controls['InsuredHolderAge'].touched"
+            formControlName="InsuredHolderAge">
+          <div
+            *ngIf="(formSubmitted)||policyForm.controls['InsuredHolderAge'].invalid && policyForm.controls['InsuredHolderAge'].touched">
+            <span class="text-danger" *ngIf="policyForm.controls['InsuredHolderAge'].errors?.['required']">Insured
+              Person's Age is
+              required</span>
+          </div>
+        </div>
+        <!-- <div class="input-group">
+              <label for="policytype">Policy Type</label>
+              <select id="policytype" name="Policy Type" formControlName="policytype" >
+                <option value="0">Select Policy Type</option>
+                
+                <option *ngFor="let item of policyTypeValue" value={{item.policyTypeId}}>
+                  {{item.policytypeValue}}
+                </option>
+              </select>
+            </div> -->
+        <div class="x">
+          <!-- <div *ngIf="policyId==0"> -->
+            <label for="Policy Type">Policy Type</label>
+            <select id="policytype" name="policytype" formControlName="PolicyType" >
+              <option value="" [disabled]="disabledValue">Select Policy Type</option>
+              <option value="1" [disabled]="disabledValue" >Personal</option>
+              <option value="2" [disabled]="disabledValue">Vehicle</option>
+              <option value="3" [disabled]="disabledValue">Asset</option>
+            </select>
+          <!-- </div>  -->
+           <!-- <div *ngIf="policyId!=0">
+            <label for="Policy Type">Policy Type</label>
+            <select id="policytype" name="policytype"  formControlName="PolicyType" [disabled]="false">
+              <option value="">{{policyDetails.PolicyType}}</option>
+            </select>
+          </div> -->
+        </div>
+  
+        <div *ngIf="policyForm.value['PolicyType']=='2'">
+          <div class="input-group">
+            <label for="Vehicle Model">Vehicle Model</label>
+            <input type="text" name="Vehicle Model" id="Vehicle Model" placeholder="Enter the Vehicle's Model"
+              formControlName="VehicleModel" />
+          </div>
+          <div class="input-group">
+            <label for="Vehicle Number">Vehicle Number</label>
+            <input type="text" name="Vehicle Number" id="Vehicle Number" placeholder="Enter the Vehicle's Number"
+              formControlName="VehicleNumber" />
+          </div>
+        </div>
+        <div *ngIf="policyForm.value['PolicyType']=='3'">
+          <div class="input-group">
+            <label for="House Address">House Address</label>
+            <input type="text" name="House Address" id="House Address" placeholder="Enter the House Address"
+              formControlName="HouseAddress" />
+          </div>
+          <div class="input-group">
+            <label for="Asset Value">Asset Value</label>
+            <input type="text" name="Asset Value" id="Asset Value" placeholder="Enter the Asset Value"
+              formControlName="AssetValue" />
+          </div>
+        </div>
+        <br>
+        <div class="x">
+          <label for="Coverage Type">Coverage Type</label>
+          <select id="coveragetype" name="coveragetype" formControlName="CoverageType" >
+            <option value="">Select Coverage Type</option>
+            <option value="1">Third party coverage</option>
+            <option value="2">Full coverage</option>
+          </select>
+        </div>
+        <div class="row btns-group1">
+          <!-- <a [routerLink]="['/app-searchpolicy']" class="btn btn-next width-50 ml-auto">Back</a>       -->
+  
+          <a (click)="Back()" class="btn btn-next width-50 ml-auto">&nbsp;Back</a> 
+          <div *ngIf="type=='view'">
+            <a routerLink="/editpolicy/{{policyDetail.policyId}}"><button type="button" class="btn btn-outline-warning"
+              >Edit</button></a>
+          </div>
+          <div *ngIf="policyid>0 && type=='edit'">
+            <a (click)="updatePolicy()" class="btn">Update</a>
+          </div> 
+          <div *ngIf="policyid==0 && type=='create'">
+            <a (click)="createPolicy()" class="btn">Submit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="sticky-footer">
+    <div class="container-fluid text-light footer-background">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col text-center text-md-start">
+            <p class="mb-md-0 text-white">PolicyManagmentSystem. All
+              Rights
+              Reserved.</p>
+          </div>
+          <div class="col-md-4 text-center text-md-end">
+            <p class="mb-1 text-white">Aspire Systems @2022<br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,569 @@
+[2022-11-24 11:37:29.037 +05:30  INF]  Application is shutting down...
+[2022-11-24 11:37:44.070 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 11:37:44.495 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 11:37:44.495 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 11:37:44.500 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 11:37:44.500 +05:30  INF]  Hosting environment: Development
+[2022-11-24 11:37:44.501 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 11:37:56.473 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/ - -
+[2022-11-24 11:37:56.559 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/ - - - 404 0 - 100.9714ms
+[2022-11-24 11:38:02.103 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger - -
+[2022-11-24 11:38:02.104 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger - - - 301 0 - 0.8362ms
+[2022-11-24 11:38:02.115 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-24 11:38:02.172 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 57.1261ms
+[2022-11-24 11:38:02.213 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-11-24 11:38:02.213 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-24 11:38:02.213 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-24 11:38:02.231 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-24 11:38:02.231 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-24 11:38:02.231 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-24 11:38:02.232 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 19.1738ms
+[2022-11-24 11:38:02.232 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 19.6460ms
+[2022-11-24 11:38:02.232 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 19.6872ms
+[2022-11-24 11:38:05.089 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger - -
+[2022-11-24 11:38:05.089 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger - - - 301 0 - 0.2758ms
+[2022-11-24 11:38:05.099 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-24 11:38:05.101 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 1.1896ms
+[2022-11-24 11:38:05.218 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - -
+[2022-11-24 11:38:05.218 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-24 11:38:05.220 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-24 11:38:05.220 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-24 11:38:05.221 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 3.2241ms
+[2022-11-24 11:38:05.233 +05:30  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-24 11:38:05.233 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 15.0130ms
+[2022-11-24 11:38:05.237 +05:30  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-24 11:38:05.237 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 19.0120ms
+[2022-11-24 11:38:05.403 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-24 11:38:05.665 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 261.7455ms
+[2022-11-24 11:39:51.037 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 418
+[2022-11-24 11:39:51.054 +05:30  INF]  CORS policy execution successful.
+[2022-11-24 11:39:51.064 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 11:39:51.109 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 11:39:53.840 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 11:39:54.897 +05:30  INF]  Executed DbCommand (97ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [vehicledetail] ([IsActive], [VehicleModel], [VehicleNumber])
+VALUES (@p0, @p1, @p2);
+SELECT [VehicleDetailId]
+FROM [vehicledetail]
+WHERE @@ROWCOUNT = 1 AND [VehicleDetailId] = scope_identity();
+[2022-11-24 11:39:55.346 +05:30  INF]  Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 15), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 10), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [policy] ([CoverageId], [Description], [Duration], [EndDate], [HouseDetailId], [InsuredAmount], [InsuredHolderAge], [InsuredName], [IsActive], [PolicyTypeId], [Premium], [StartDate], [Title], [VehicleDetailId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [PolicyId]
+FROM [policy]
+WHERE @@ROWCOUNT = 1 AND [PolicyId] = scope_identity();
+[2022-11-24 11:39:55.363 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-24 11:39:55.475 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 4354.0408ms
+[2022-11-24 11:39:55.476 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 11:39:55.482 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 418 - 200 47 application/json;+charset=utf-8 4444.9047ms
+[2022-11-24 12:33:53.406 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Ted - -
+[2022-11-24 12:33:53.417 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:33:53.446 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 12:33:53.537 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 12:33:54.048 +05:30  INF]  Executed DbCommand (22ms) [Parameters=[@__searchValues_InsuredName_0='?' (Size = 15), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    WHERE CASE
+        WHEN (@__searchValues_InsuredName_0 LIKE N'') OR (CHARINDEX(@__searchValues_InsuredName_0, [p].[InsuredName]) > 0) THEN CAST(1 AS bit)
+        ELSE CAST(0 AS bit)
+    END = CAST(1 AS bit)
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-24 12:33:54.078 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-24 12:33:54.102 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 655.5267ms
+[2022-11-24 12:33:54.102 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:33:54.102 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?InsuredName=Ted - - - 200 285 application/json;+charset=utf-8 696.5478ms
+[2022-11-24 12:34:10.177 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=2 - -
+[2022-11-24 12:34:10.177 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:10.178 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 12:34:10.189 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 12:34:10.214 +05:30  INF]  Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-24 12:34:10.219 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-24 12:34:10.220 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 41.5478ms
+[2022-11-24 12:34:10.220 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:10.220 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=2 - - - 200 794 application/json;+charset=utf-8 43.3106ms
+[2022-11-24 12:34:19.197 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=3 - -
+[2022-11-24 12:34:19.197 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:19.197 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 12:34:19.198 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 12:34:19.214 +05:30  INF]  Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-24 12:34:19.215 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-24 12:34:19.216 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 18.3986ms
+[2022-11-24 12:34:19.216 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:19.217 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies?PageNumber=2&PageSize=3 - - - 200 1087 application/json;+charset=utf-8 19.3176ms
+[2022-11-24 12:34:43.167 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - -
+[2022-11-24 12:34:43.167 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:43.167 +05:30  INF]  Route matched with {action = "GetAllPolicies", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPolicies(Policy_Management_System_API.SearchParams) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 12:34:43.168 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 12:34:43.189 +05:30  INF]  Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[PolicyId], [t].[CoverageId], [t].[Description], [t].[Duration], [t].[EndDate], [t].[HouseDetailId], [t].[InsuredAmount], [t].[InsuredHolderAge], [t].[InsuredName], [t].[IsActive], [t].[PolicyTypeId], [t].[Premium], [t].[StartDate], [t].[Title], [t].[VehicleDetailId], [c].[CoverageId], [c].[CoverageType], [c].[IsActive], [v].[VehicleDetailId], [v].[IsActive], [v].[VehicleModel], [v].[VehicleNumber], [h].[HouseDetailId], [h].[AssetValue], [h].[HouseAddress], [h].[IsActive], [p0].[PolicyTypeId], [p0].[IsActive], [p0].[Policytype]
+FROM (
+    SELECT [p].[PolicyId], [p].[CoverageId], [p].[Description], [p].[Duration], [p].[EndDate], [p].[HouseDetailId], [p].[InsuredAmount], [p].[InsuredHolderAge], [p].[InsuredName], [p].[IsActive], [p].[PolicyTypeId], [p].[Premium], [p].[StartDate], [p].[Title], [p].[VehicleDetailId]
+    FROM [policy] AS [p]
+    ORDER BY [p].[PolicyId]
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [coverage] AS [c] ON [t].[CoverageId] = [c].[CoverageId]
+LEFT JOIN [vehicledetail] AS [v] ON [t].[VehicleDetailId] = [v].[VehicleDetailId]
+LEFT JOIN [housedetail] AS [h] ON [t].[HouseDetailId] = [h].[HouseDetailId]
+INNER JOIN [policytype] AS [p0] ON [t].[PolicyTypeId] = [p0].[PolicyTypeId]
+ORDER BY [t].[PolicyId]
+[2022-11-24 12:34:43.190 +05:30  INF]  Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Policy_Management_System_API.Policy, Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType6`12[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Single, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Policy_Management_System_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-11-24 12:34:43.190 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API) in 23.5073ms
+[2022-11-24 12:34:43.190 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.GetAllPolicies (Policy_Management_System_API)'
+[2022-11-24 12:34:43.191 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/Policy/GetAllPolicies - - - 200 2337 application/json;+charset=utf-8 23.8808ms
+[2022-11-24 14:47:47.290 +05:30  INF]  Application is shutting down...
+[2022-11-24 14:48:05.674 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 14:48:06.046 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 14:48:06.046 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 14:48:06.050 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 14:48:06.050 +05:30  INF]  Hosting environment: Development
+[2022-11-24 14:48:06.050 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 15:53:52.207 +05:30  INF]  Application is shutting down...
+[2022-11-24 15:54:25.306 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 15:54:25.450 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 15:54:25.450 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 15:54:25.454 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 15:54:25.455 +05:30  INF]  Hosting environment: Development
+[2022-11-24 15:54:25.455 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 17:45:39.704 +05:30  INF]  Application is shutting down...
+[2022-11-24 17:45:50.290 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 17:45:50.453 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 17:45:50.453 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 17:45:50.456 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 17:45:50.456 +05:30  INF]  Hosting environment: Development
+[2022-11-24 17:45:50.456 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 18:51:16.371 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/index.html - -
+[2022-11-24 18:51:16.640 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/index.html - - - 200 - text/html;charset=utf-8 279.7864ms
+[2022-11-24 18:51:16.692 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - -
+[2022-11-24 18:51:16.717 +05:30  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-24 18:51:16.718 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/swagger-ui.css - - - 200 143632 text/css 26.5385ms
+[2022-11-24 18:51:16.964 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - -
+[2022-11-24 18:51:16.968 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - -
+[2022-11-24 18:51:16.968 +05:30  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-24 18:51:16.969 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/favicon-32x32.png - - - 200 628 image/png 0.8894ms
+[2022-11-24 18:51:17.196 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 231.9764ms
+[2022-11-24 18:53:41.472 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607
+[2022-11-24 18:53:41.486 +05:30  INF]  CORS policy execution successful.
+[2022-11-24 18:53:41.502 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 18:53:41.557 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 18:53:44.356 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 18:53:45.332 +05:30  INF]  Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = Single), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [housedetail] ([AssetValue], [HouseAddress], [IsActive])
+VALUES (@p0, @p1, @p2);
+SELECT [HouseDetailId]
+FROM [housedetail]
+WHERE @@ROWCOUNT = 1 AND [HouseDetailId] = scope_identity();
+[2022-11-24 18:53:45.576 +05:30  INF]  Executed DbCommand (51ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = Single), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = Single), @p6='?' (DbType = Int32), @p7='?' (Size = 15), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int32), @p10='?' (DbType = Single), @p11='?' (DbType = DateTime2), @p12='?' (Size = 10), @p13='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [policy] ([CoverageId], [Description], [Duration], [EndDate], [HouseDetailId], [InsuredAmount], [InsuredHolderAge], [InsuredName], [IsActive], [PolicyTypeId], [Premium], [StartDate], [Title], [VehicleDetailId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+SELECT [PolicyId]
+FROM [policy]
+WHERE @@ROWCOUNT = 1 AND [PolicyId] = scope_identity();
+[2022-11-24 18:53:45.611 +05:30  INF]  Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2022-11-24 18:53:45.741 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 4170.0171ms
+[2022-11-24 18:53:45.741 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 18:53:45.752 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607 - 200 47 application/json;+charset=utf-8 4280.5017ms
+[2022-11-24 19:25:16.519 +05:30  INF]  Application is shutting down...
+[2022-11-24 19:25:27.974 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 19:25:28.181 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 19:25:28.181 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 19:25:28.185 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 19:25:28.185 +05:30  INF]  Hosting environment: Development
+[2022-11-24 19:25:28.185 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 19:26:01.733 +05:30  INF]  Application is shutting down...
+[2022-11-24 19:26:06.171 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 19:26:06.332 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 19:26:06.333 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 19:26:06.347 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 19:26:06.347 +05:30  INF]  Hosting environment: Development
+[2022-11-24 19:26:06.347 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 19:26:21.805 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607
+[2022-11-24 19:26:21.922 +05:30  INF]  CORS policy execution successful.
+[2022-11-24 19:26:21.938 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 19:26:22.012 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 19:26:25.373 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 19:26:36.534 +05:30  ERR]  An error occurred using the connection to database 'Policyyy_Management_System' on server 'ASPLAP1916'.
+[2022-11-24 19:26:36.619 +05:30  ERR]  An exception occurred in the database while saving changes for context type 'Policy_Management_System_API.Context'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:bf504758-bdc1-4dfd-946e-aa3a59c570ff
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:bf504758-bdc1-4dfd-946e-aa3a59c570ff
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+[2022-11-24 19:26:36.732 +05:30  ERR]  PolicyDataAccessLayer-CreatePolicy()-An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.-   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Policy_Management_System_API.PolicyDataAccessLayer.CreatePolicy(Policy policy, VehicleDetail vehicleDetail, HouseDetail houseDetail) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\DataAccessLayer\PolicyDataAccessLayer.cs:line 35
+[2022-11-24 19:26:36.733 +05:30  ERR]  PolicyService : CreatePolicy()-An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+   at Policy_Management_System_API.PolicyDataAccessLayer.CreatePolicy(Policy policy, VehicleDetail vehicleDetail, HouseDetail houseDetail) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\DataAccessLayer\PolicyDataAccessLayer.cs:line 68
+   at Policy_Management_System_API.PolicyService.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Services\PolicyService.cs:line 74
+[2022-11-24 19:26:36.778 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 14732.7955ms
+[2022-11-24 19:26:36.796 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 19:26:36.857 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:bf504758-bdc1-4dfd-946e-aa3a59c570ff
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Policy_Management_System_API.PolicyService.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Services\PolicyService.cs:line 95
+   at Policy_Management_System_API.PolicyController.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Controllers\PolicyController.cs:line 30
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-11-24 19:26:36.927 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607 - 500 - text/plain;+charset=utf-8 15125.4786ms
+[2022-11-24 19:27:40.377 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 19:27:40.968 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 19:27:40.972 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 19:27:40.981 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 19:27:40.983 +05:30  INF]  Hosting environment: Development
+[2022-11-24 19:27:40.985 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 19:27:42.437 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/ - -
+[2022-11-24 19:27:42.558 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/ - - - 404 0 - 124.1583ms
+[2022-11-24 19:27:48.249 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607
+[2022-11-24 19:27:48.263 +05:30  INF]  CORS policy execution successful.
+[2022-11-24 19:27:48.276 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 19:27:48.331 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 19:28:19.873 +05:30  INF]  Entity Framework Core 6.0.10 initialized 'Context' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.10' with options: None
+[2022-11-24 19:28:31.355 +05:30  ERR]  An error occurred using the connection to database 'Policyyy_Management_System' on server 'ASPLAP1916'.
+[2022-11-24 19:28:31.617 +05:30  ERR]  An exception occurred in the database while saving changes for context type 'Policy_Management_System_API.Context'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:894b4d84-4e72-46c4-b11c-d5af77c25a31
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:894b4d84-4e72-46c4-b11c-d5af77c25a31
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+[2022-11-24 19:28:42.666 +05:30  ERR]  PolicyDataAccessLayer-CreatePolicy()-An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.-   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Policy_Management_System_API.PolicyDataAccessLayer.CreatePolicy(Policy policy, VehicleDetail vehicleDetail, HouseDetail houseDetail) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\DataAccessLayer\PolicyDataAccessLayer.cs:line 35
+[2022-11-24 19:28:51.494 +05:30  ERR]  PolicyService : CreatePolicy()-An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+   at Policy_Management_System_API.PolicyDataAccessLayer.CreatePolicy(Policy policy, VehicleDetail vehicleDetail, HouseDetail houseDetail) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\DataAccessLayer\PolicyDataAccessLayer.cs:line 68
+   at Policy_Management_System_API.PolicyService.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Services\PolicyService.cs:line 74
+[2022-11-24 19:29:40.220 +05:30  INF]  Executed action Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API) in 111876.5283ms
+[2022-11-24 19:29:40.228 +05:30  INF]  Executed endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 19:29:40.464 +05:30  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "Policyyy_Management_System" requested by the login. The login failed.
+Login failed for user 'ASPIRESYS\harini.rajkumar'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__104_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:894b4d84-4e72-46c4-b11c-d5af77c25a31
+Error Number:4060,State:1,Class:11
+   --- End of inner exception stack trace ---
+   at Policy_Management_System_API.PolicyService.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Services\PolicyService.cs:line 95
+   at Policy_Management_System_API.PolicyController.CreatePolicy(PolicyDto policyDto) in C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\Controllers\PolicyController.cs:line 30
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-11-24 19:29:40.509 +05:30  INF]  Request finished HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607 - 500 - text/plain;+charset=utf-8 112260.4184ms
+[2022-11-24 19:30:30.534 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 19:30:30.737 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 19:30:30.739 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 19:30:30.748 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 19:30:30.750 +05:30  INF]  Hosting environment: Development
+[2022-11-24 19:30:30.752 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 19:30:31.246 +05:30  INF]  Request starting HTTP/2 GET https://localhost:7024/ - -
+[2022-11-24 19:30:31.336 +05:30  INF]  Request finished HTTP/2 GET https://localhost:7024/ - - - 404 0 - 95.9682ms
+[2022-11-24 19:30:35.910 +05:30  INF]  Request starting HTTP/2 POST https://localhost:7024/Policy/CreatePolicy application/json-patch+json 607
+[2022-11-24 19:30:35.929 +05:30  INF]  CORS policy execution successful.
+[2022-11-24 19:30:35.933 +05:30  INF]  Executing endpoint 'Policy_Management_System_API.PolicyController.CreatePolicy (Policy_Management_System_API)'
+[2022-11-24 19:30:35.961 +05:30  INF]  Route matched with {action = "CreatePolicy", controller = "Policy"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreatePolicy(Policy_Management_System_API.PolicyDto) on controller Policy_Management_System_API.PolicyController (Policy_Management_System_API).
+[2022-11-24 20:13:48.609 +05:30  INF]  User profile is available. Using 'C:\Users\harini.rajkumar.ASPIRESYS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-11-24 20:13:48.720 +05:30  INF]  Now listening on: https://localhost:7024
+[2022-11-24 20:13:48.720 +05:30  INF]  Now listening on: http://localhost:5084
+[2022-11-24 20:13:48.725 +05:30  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-24 20:13:48.725 +05:30  INF]  Hosting environment: Development
+[2022-11-24 20:13:48.725 +05:30  INF]  Content root path: C:\Users\harini.rajkumar.ASPIRESYS\Desktop\Policy_Management_System_API\
+[2022-11-24 20:16:00.717 +05:30  INF]  Application is shutting down...
