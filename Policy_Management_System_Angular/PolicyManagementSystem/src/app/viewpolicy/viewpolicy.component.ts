@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { PolicyserviceService } from 'src/app/service/policyservice.service';
 import { SearchpolicyComponent } from '../searchpolicy/searchpolicy.component';
 @Component({
@@ -18,7 +19,7 @@ export class ViewpolicyComponent implements OnInit{
   error: string = "";
   response: string = '';
   page:number=1;
-  constructor(private service: PolicyserviceService, private http: HttpClient,private SearchService: SearchpolicyComponent, private route: Router) {
+  constructor(private service: PolicyserviceService, private http: HttpClient,private SearchService: SearchpolicyComponent, private route: Router, private location: Location) {
 
   }
 
@@ -43,12 +44,6 @@ export class ViewpolicyComponent implements OnInit{
     HouseAddress: "",
     AssetValue: 0
   }]
-
-  EditPolicy(id: number) {
-
-    console.warn(id);
-    //Do Something
-  }
   getPolicyById(policyId: number) {
     this.service.getPolicyById(this.policyId).subscribe({
       next: (data: any) => {
@@ -58,13 +53,16 @@ export class ViewpolicyComponent implements OnInit{
   }
 
   deletePolicy(policyId: number) {
-    console.warn(policyId);
     this.service.deletePolicy(policyId).subscribe(
       {
         next: (data) => { this.response = data.message },
         error: (error) => this.error = error.error,
-        complete:()=> this.SearchService.getPolicyByFilter()
+        complete:()=>this.Back()
+        // this.SearchService.getPolicyByFilter()
       },
     );
+  }
+  Back() {
+    this.location.back();
   }
 }

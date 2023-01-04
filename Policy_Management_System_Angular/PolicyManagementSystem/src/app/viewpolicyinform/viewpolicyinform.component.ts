@@ -13,8 +13,6 @@ export class ViewpolicyinformComponent implements OnInit{
 
   @Input()
   public filterDetails!: any;
-  // @Output()
-  // policyData=new EventEmitter<Policy[]>;
   policyData:Policy = {
     policyId: 0,
     title: '',
@@ -40,19 +38,15 @@ export class ViewpolicyinformComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    // this.path=this.route.snapshot.url[0].path;
     this.route.params.subscribe(params => {
         this.policyId = params['policyId']
     });
     this.GetPolicyDetails();
   }
   GetPolicyDetails() {
-    console.log(this.policyId);
     this.service.getPolicyById(this.policyId).subscribe({
       next: (data) => {
         this.policyData = data;
-        console.error(data);
-        console.warn(this.policyData)
       },
      
     });

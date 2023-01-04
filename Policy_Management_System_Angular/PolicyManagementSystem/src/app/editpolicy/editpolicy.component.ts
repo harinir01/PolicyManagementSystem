@@ -17,22 +17,22 @@ export class EditpolicyComponent implements OnInit{
   typeOfFunction:string="edit";
   policyId:number=0;
   readOnly!:boolean;
-  policyData: any = [{
+  policyData: Policy = {
     policyId: 0,
     title: '',
     description: '',
-    startdate: '',
-    enddate: '',
-    insuredamount: 0,
-    insuredname: '',
-    insuredholderage: 0,
-    policytypeid: 0,
-    vehiclemodel: '',
-    vehiclenumber: '',
-    houseaddress: '',
-    assetvalue: 0,
-    coverageid: 0,
-  }]
+    startDate: '',
+    endDate: '',
+    insuredAmount: 0,
+    insuredName: '',
+    insuredHolderAge: 0,
+    policyTypeId: 0,
+    vehicleModel: '',
+    vehicleNumber: '',
+    houseAddress: '',
+    assetValue: 0,
+    coverageId: 0,
+  }
   constructor(private service: PolicyserviceService, private toaster: Toaster,private location : Location,private route: ActivatedRoute){
 
   }
@@ -48,11 +48,6 @@ export class EditpolicyComponent implements OnInit{
       this.readOnly=true;
     }
     this.GetPolicyDetails();
-    // if (this.policyId != 0) {
-    //   console.log(this.policyId);
-    //   this.GetPolicyDetails();
-    //   console.warn(this.policyData);
-    // }
     
   }
   GetPolicyDetails() {
@@ -61,7 +56,6 @@ export class EditpolicyComponent implements OnInit{
         this.policyData = data;
         console.log(this.policyData)
       },
-      // complete: () => this.LoadForm(),
     });
   }
   editPolicy(policy : Policy) {

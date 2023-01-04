@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\harini.rajkumar.ASPIRESYS\\Desktop\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj": {}
+    "C:\\Users\\harini.rajkumar.ASPIRESYS\\Documents\\GitHub\\Policy Management system\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\harini.rajkumar.ASPIRESYS\\Desktop\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj": {
+    "C:\\Users\\harini.rajkumar.ASPIRESYS\\Documents\\GitHub\\Policy Management system\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Desktop\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj",
+        "projectUniqueName": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Documents\\GitHub\\Policy Management system\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj",
         "projectName": "Policy_Management_System_API",
-        "projectPath": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Desktop\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj",
+        "projectPath": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Documents\\GitHub\\Policy Management system\\PolicyManagementSystem\\Policy_Management_System_API\\Policy_Management_System_API.csproj",
         "packagesPath": "C:\\Users\\harini.rajkumar.ASPIRESYS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Desktop\\PolicyManagementSystem\\Policy_Management_System_API\\obj\\",
+        "outputPath": "C:\\Users\\harini.rajkumar.ASPIRESYS\\Documents\\GitHub\\Policy Management system\\PolicyManagementSystem\\Policy_Management_System_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\harini.rajkumar.ASPIRESYS\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -57,6 +57,7 @@ export class PolicyformComponent implements OnInit {
   }
   
   LoadForm() {
+    console.warn(this.policyDetail)
     this.policyForm = this.FB.group({
       Title: [this.policyDetail.title, [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
       Description: [this.policyDetail.description, [Validators.required, Validators.minLength(5), Validators.maxLength(500)]],
