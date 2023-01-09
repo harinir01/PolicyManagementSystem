@@ -4,7 +4,7 @@ namespace Policy_Management_System_API
     public interface IPolicyService
     {
         bool CreatePolicy(PolicyDto policyDto);
-        object GetAllPolicies(SearchParams searchValues);
+        List<Policy> GetAllPolicies(SearchParams searchValues);
         object GetPolicyById(int PolicyId);
         bool UpdatePolicy(PolicyDto policyDto);
         Task<Policy> UpdatePolicyPatch(int policyid, JsonPatchDocument policyDocument);

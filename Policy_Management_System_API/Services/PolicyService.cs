@@ -69,7 +69,7 @@ namespace Policy_Management_System_API
             }
         }
         //Getting all Policies and Search a Policy based on the applied filter
-        public object GetAllPolicies(SearchParams searchValues)
+        public List<Policy> GetAllPolicies(SearchParams searchValues)
         {
             try
             {

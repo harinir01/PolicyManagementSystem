@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreatepolicyComponent } from './createpolicy/createpolicy.component';
 import { EditpolicyComponent } from './editpolicy/editpolicy.component';
-import { PolicyformComponent } from './shared/policyform/policyform.component';
+// import { PolicyformComponent } from './shared/policyform/policyform.component';
 import { SearchpolicyComponent } from './searchpolicy/searchpolicy.component';
-import { ViewpolicyComponent } from './viewpolicy/viewpolicy.component';
+// import { ViewpolicyComponent } from './viewpolicy/viewpolicy.component';
 import { ViewpolicyinformComponent } from './viewpolicyinform/viewpolicyinform.component';
 
 const routes: Routes = [

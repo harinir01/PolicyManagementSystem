@@ -14,7 +14,6 @@ export class PolicyformComponent implements OnInit {
   endyear!: number;
   startyear!: number;
   currentDate: Date = new Date();
-  // policyId: number = 0;
   policyForm!: FormGroup;
   formSubmitted: boolean = false;
   @Input() 
